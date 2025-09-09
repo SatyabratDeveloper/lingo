@@ -16,7 +16,6 @@ import Link from "next/link";
 
 import Banner from "@/components/banner";
 import { Button } from "@/components/ui/button";
-import { links } from "@/config";
 import { cn } from "@/lib/utils";
 
 export const Header = () => {
@@ -29,16 +28,22 @@ export const Header = () => {
 
       <header
         className={cn(
-          "h-20 w-full border-b-2 border-slate-200 px-4",
+          "w-full py-2",
           !hideBanner ? "mt-20 sm:mt-16 lg:mt-10" : "mt-0"
         )}
       >
         <div className="mx-auto flex h-full items-center justify-between lg:max-w-screen-lg">
-          <Link href="/" className="flex items-center gap-x-3 pb-7 pl-4 pt-8">
-            <Image src="/mascot.svg" alt="Mascot" height={40} width={40} />
+          <Link href="/" className="flex items-center gap-x-3">
+            <Image
+              src="/aidemy_md_logo.jpeg"
+              alt="aidemy_md"
+              height={70}
+              width={70}
+              className="rounded-lg"
+            />
 
-            <h1 className="text-2xl font-extrabold tracking-wide text-green-600">
-              Lingo
+            <h1 className="text-2xl font-[850] tracking-wide text-[#ff8800]">
+              AIDEMY MD
             </h1>
           </Link>
 
@@ -53,25 +58,15 @@ export const Header = () => {
 
               <SignedOut>
                 <SignInButton mode="modal">
-                  <Button size="lg" variant="ghost">
+                  <Button
+                    size="lg"
+                    variant="secondaryOutline"
+                    className="w-full"
+                  >
                     Login
                   </Button>
                 </SignInButton>
               </SignedOut>
-
-              <Link
-                href={links.sourceCode}
-                target="_blank"
-                rel="noreferrer noopener"
-                className={isSignedIn ? "pt-1.5" : "pt-3"}
-              >
-                <Image
-                  src="/github.svg"
-                  alt="Source Code"
-                  height={20}
-                  width={20}
-                />
-              </Link>
             </ClerkLoaded>
           </div>
         </div>

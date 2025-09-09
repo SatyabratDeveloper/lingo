@@ -22,8 +22,9 @@ const buttonVariants = cva(
         primaryOutline: "bg-white text-sky-500 hover:bg-slate-100",
 
         secondary:
-          "bg-green-500 text-primary-foreground hover:bg-green-500/90 border-green-600 border-b-4 active:border-b-0",
-        secondaryOutline: "bg-white text-green-500 hover:bg-slate-100",
+          "bg-[#ff8800] text-primary-foreground font-extrabold hover:bg-[#ff7b00]/85 border-[#ff7b00] hover:border-[#ff7b00]/50 border-b-4 active:border-b-0",
+        secondaryOutline:
+          "bg-slate-50 hover:bg-slate-200 font-extrabold border-b-4 border-t-2 border-l-2 border-r-2 border-slate-200 hover:border-slate-300/80 active:border-0 text-[#ff8800] hover:bg-slate-100",
 
         danger:
           "bg-rose-500 text-primary-foreground hover:bg-rose-500/90 border-rose-600 border-b-4 active:border-b-0",
@@ -34,7 +35,7 @@ const buttonVariants = cva(
         superOutline: "bg-white text-indigo-500 hover:bg-slate-100",
 
         ghost:
-          "bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100",
+          "bg-transparent text-slate-600 border-transparent border-0 hover:bg-slate-100",
 
         sidebar:
           "bg-transparent text-slate-500 border-2 border-transparent hover:bg-slate-100 transition-none",
